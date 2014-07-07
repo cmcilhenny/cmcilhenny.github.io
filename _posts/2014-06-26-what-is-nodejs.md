@@ -8,14 +8,14 @@ Hello World. css coming soon.
 What is Node?
 ===========
 
-### nodejs.org definition
 
->Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
+>Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.   
+			**-nodejs.org**
 
 ### Some other definitions
 
-=> Node allows you to build scalable network applications using Javascript on the server-side.
-=> Node is a command line interpreter for JavaScript.
+* Node allows you to build scalable network applications using Javascript on the server-side.
+* Node is a command line interpreter for JavaScript.
 
 ### Helpful snipits of info
 	* Ryan Dahl is node's origin author
@@ -25,13 +25,13 @@ What is Node?
 
 ### Node in the real world
 
-=> A few good uses cases for Node:
+A few good uses cases for Node:
 
 	* fast file upload (like Flckr)
 	* real-time data apps (like HipChat)
 	* websocket server — keeping an open connection with a server, which is distinct from HTTP.
 
-=> Actual companies/sites
+Actual companies/sites
 
 	* PayPal website(front-end)
 	* Walmart (mobile apps)
@@ -39,7 +39,7 @@ What is Node?
 	* Washington Post
 	* Atom.io 
 
-=> A few good things to note that Node isn't:
+A few good things to note that Node is not:
 
 	* a web framework
 	* multi-threaded
