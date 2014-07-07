@@ -2,3 +2,22 @@
 layout: post
 title: Blogging Like a Boss
 ---
+
+{% for post in site.posts %}
+
+<div class="row">
+  <div class="col-12 col-lg-12">
+    <a href="{{post.url}}"><h2 class="home-post-title">{{post.title}}</h2></a>
+    <div><em>{{post.date | date: "%B %d, %Y"}}</em> 
+      
+    </div>
+    <br>
+    <div>{{post.content}}</div>
+   
+  </div>
+</div>
+<br>
+<hr>
+<br>
+
+{% endfor %}
