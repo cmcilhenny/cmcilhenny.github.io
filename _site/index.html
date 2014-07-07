@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Blogging</title>
+	<title>Blogging Like a Boss</title>
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
@@ -12,16 +12,16 @@
 <body>
 
 	<div class="blog-masthead">
-     <div class="container">
-       <nav class="blog-nav">
-        <a class="blog-nav-item active" href="#">Home</a>
-        <a class="blog-nav-item" href="#">Archive</a>
-        <a class="blog-nav-item" href="#">About</a>
-        <a class="blog-nav-item pull-right" href="#">Courtney :: Blog</a>
-       </nav>
-     </div>
-
-   </div>
+	<div class="container">
+		 <nav class="blog-nav">
+		  <a class="blog-nav-item active" href="#">Home</a>
+		  <a class="blog-nav-item" href="#">Archive</a>
+		  <a class="blog-nav-item" href="#">About</a>
+		  <a class="blog-nav-item pull-right" href="#">Courtney :: Blog</a>
+		 </nav>
+	</div>
+ </div>
+	
 <!-- 
    <div class="home-container">
       <div class="row">
@@ -47,110 +47,13 @@
 
     <div class="container">
     	<div class="row">
-    		<div class="col-sm-12 col-lg-8 col-lg-offset-1"></div>
-			<p>Hello World… css coming soon…</p>
-
-<h1 id="what-is-node">What is Node?</h1>
-
-<h3 id="nodejsorg-definition">nodejs.org definition</h3>
-
-<p>“Node.js is a platform built on Chrome’s JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.” </p>
-
-<h3 id="some-other-definitions">Some other definitions</h3>
-
-<p>=&gt; Node allows you to build scalable network applications using Javascript on the server-side.
-=&gt; Node is a command line interpreter for JavaScript.</p>
-
-<h3 id="helpful-snipits-of-info">Helpful snipits of info</h3>
-<pre><code>* Ryan Dahl is node's origin author
-* Node was itially released in May of 2009
-* Node is written in C, C++, JavaScript
-* Visit the node website at nodejs.org
-</code></pre>
-
-<h3 id="node-in-the-real-world">Node in the real world</h3>
-
-<p>=&gt; A few good uses cases for Node:</p>
-
-<pre><code>* fast file upload (like Flckr)
-* real-time data apps (like HipChat)
-* websocket server — keeping an open connection with a server, 	  which is distinct from HTTP.
-</code></pre>
-
-<p>=&gt; Actual companies/sites</p>
-
-<pre><code>* PayPal website(front-end)
-* Walmart (mobile apps)
-* eHarmony
-* Washington Post
-* Atom.io 
-</code></pre>
-
-<p>=&gt; A few good things to note that Node isn’t:</p>
-
-<pre><code>* a web framework
-* multi-threaded
-</code></pre>
-
-<h3 id="blocking-vs-non-blocking">Blocking vs. Non-Blocking</h3>
-<p>So, Node applications are designed to maximize throughput and efficiency, using non-blocking I/O and asynchronous events.</p>
-
-<ul>
-  <li>What does the above sentence mean? </li>
-  <li>What are non-blocking I/O and asynchronous events?</li>
-</ul>
-
-<p>Before we get into definitions, we already have some experience with this basic concept of blocking. Our &lt;script&gt; tags in html are a great example of this. If organized in certain ways, javascript files can block the rendering of a page. It is because of blocking that we always put our script tags last — after links to CSS and insome cases, after html.</p>
-
-<h6 id="io">I/O:</h6>
-<p>input/output</p>
-
-<h6 id="blocking">Blocking:</h6>
-<p>Imagine you’re operating the cash register in a bakery. You handle your customers sequentially and synchronously, like this:</p>
-
-<ul>
-  <li>Take order</li>
-  <li>Tell baker to bake the bread</li>
-  <li>Wait until bread is baked</li>
-  <li>Charge money</li>
-  <li>Deliver bread</li>
-  <li>GOTO first – next customer</li>
-</ul>
-
-<h6 id="non-blocking">Non-Blocking:</h6>
-<p>Given the above scenario, a “non-blocking” implimentation is</p>
-
-<ul>
-  <li>Take order</li>
-  <li>Tell baker to bake the bread, and notify you when finished. When notified:
-    <ul>
-      <li>Charge money</li>
-      <li>Deliver bread</li>
-    </ul>
-  </li>
-  <li>GOTO 1 – next customer</li>
-</ul>
-
-<p>In the second scenario, you can more efficiently handle requests for bread because, instead of waiting for bread to be ready before handling the next customer, you can start handling the next customer while waiting for bread. </p>
-
-<h6 id="asynchonous">Asynchonous:</h6>
-<p>Asynchronous code doesn’t have to wait – your program can continue to run. You do this to keep your site or app responsive, reducing waiting time for the user (ie. non-blocking).</p>
-
-<h3 id="non-blocking-exercises">Non-Blocking Exercises</h3>
-
-<p>yah javascript! See attached files.</p>
-
-<p>===
-Resources used
-===========
-* JavaScript.is(sexy): http://javascriptissexy.com/learn-node-js-completely-and-with-confidence/
-* The Node Beginner Book by Manuel Kiessling
-*  Professional Node.js: Building Javascript Based Scalable Software
-*  Node.js Wikipedia: http://en.wikipedia.org/wiki/Node.js
-*  Node presentation pdf: http://s3.amazonaws.com/four.livejournal/20091117/jsconf.pdf</p>
-
+    		<div class="col-sm-12 col-lg-8 col-lg-offset-1">
+					
+				</div>
 			</div>
 		</div>
+
+		
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </body>
 </html>
