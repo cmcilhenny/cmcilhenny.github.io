@@ -3,14 +3,14 @@ layout: post
 title: What is nodejs
 ---
 
-Hello World... css coming soon...
+Hello World. css coming soon.
 
 What is Node?
 ===========
 
 ### nodejs.org definition
 
-"Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices." 
+>Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
 
 ### Some other definitions
 
@@ -29,7 +29,7 @@ What is Node?
 
 	* fast file upload (like Flckr)
 	* real-time data apps (like HipChat)
-	* websocket server — keeping an open connection with a server, 	  which is distinct from HTTP.
+	* websocket server — keeping an open connection with a server, which is distinct from HTTP.
 
 => Actual companies/sites
 
@@ -66,7 +66,7 @@ Imagine you're operating the cash register in a bakery. You handle your customer
 * GOTO first -- next customer
 		
 ######Non-Blocking:
-Given the above scenario, a "non-blocking" implimentation is
+Given the above scenario, a non-blocking implimentation is
 
 
 * Take order
@@ -89,11 +89,11 @@ yah javascript! See attached files.
 
 
 
-===
+===========
 Resources used
 ===========
-* JavaScript.is(sexy): http://javascriptissexy.com/learn-node-js-completely-and-with-confidence/
+* [JavaScript.is(sexy)](http://javascriptissexy.com/learn-node-js-completely-and-with-confidence/)
 * The Node Beginner Book by Manuel Kiessling
-*  Professional Node.js: Building Javascript Based Scalable Software
-*  Node.js Wikipedia: http://en.wikipedia.org/wiki/Node.js
-*  Node presentation pdf: http://s3.amazonaws.com/four.livejournal/20091117/jsconf.pdf
+* Professional Node.js: Building Javascript Based Scalable Software
+* [Node.js Wikipedia](http://en.wikipedia.org/wiki/Node.js)
+* [Node presentation pdf](http://s3.amazonaws.com/four.livejournal/20091117/jsconf.pdf)
