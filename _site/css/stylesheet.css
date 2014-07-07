@@ -48,6 +48,13 @@
 
 /*Portrait sizing*/
 .portrait {
-  height: 70px;
-  width: 70px;
+  height: 120px;
+  width: 120px;
 }
+
+/*sticky footer*/
+.footer {
+  height: 70px;
+  padding-top: 20px;
+  padding-right: 10px;
+} 
