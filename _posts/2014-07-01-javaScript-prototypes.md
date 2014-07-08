@@ -3,19 +3,21 @@ layout: post
 title: JavaScript Prototypes
 ---
 
+<h4>Recently I was asked to give a 15 minute lesson on JavaScript Prototypes. In 15 minutes I needed to explain this complicated idea to students who had just learned JavaScript. Tricky. Here's the attempt.</h4>
+
 #JavaScript Prototypes
 
 The following assumes some very basic understanding of JavaScript. It is good to remember that JavaScript is an interpreted, object-based scripting language that is primarily used for creating dynamic, interactive features on a webpage. Some say it is the language of the future!
 
-JavaScript uses prototypes instead of classes to define and create objects. What does this mean? Let's first talk about some stuff like **JavaScript Objects** (what they are and where they come from) and **Object Oriented Programing**. Once we have some understanding of objects in JavaScript and the basics of Object Oriented Programming down, we can discuss the meat of **Prototypes in JavaScript**.
+JavaScript uses prototypes instead of classes to define and create objects. What does this mean? Let us first talk about some stuff like **JavaScript Objects** (what they are and where they come from) and **Object Oriented Programing**. Once we have some understanding of objects in JavaScript and the basics of Object Oriented Programming down, we can discuss the meat of **Prototypes in JavaScript**.
 
-###Object-Oriented Programming (OOP) and why it's awesome:
+###Object-Oriented Programming (OOP) and why it is awesome:
 
 Object Oriented Programming, often referred to as OOP is really just a design philosophy. In the context of software, OOP uses a collection of objects, as opposed to a collection of functions, or a list of instructions to the computer. In OOP, each object is capable of receiving messages, processing data, and sending messages to other objects. Each object can be viewed as an independent little machine with a distinct role or responsibility.
 
 **A Practical Example of OOP**
 
-	Let’s take your “hand” as an example. The “hand” is a class (Ruby) or a prototype (JavaScript). Your body has two objects of type hand, named left hand and right hand. Their main functions are controlled/ managed by a set of electrical signals sent through your shoulders (through an interface). So the shoulder is an interface which your body uses to interact with your hands. The hand is a well architected class/prototype. The hand is being re-used to create the left hand and the right hand by slightly changing the properties of it.
+	Take your `hand` as an example. The `hand` is a class (Ruby) or a prototype (JavaScript). Your body has two objects of type hand, named left hand and right hand. Their main functions are controlled/ managed by a set of electrical signals sent through your shoulders (through an interface). So the shoulder is an interface which your body uses to interact with your hands. The hand is a well architected class/prototype. The hand is being re-used to create the left hand and the right hand by slightly changing the properties of it.
 
 Object-oriented programming is helps promote greater flexibility and maintainability in programming. Object oriented code aims to be more simple to develop and easier to understand later on. 
 
@@ -33,6 +35,7 @@ What is a property?
 	
 What does this look like in JavaScript?
 
+	{% highlight javascript %}
 	// defining an object in JavaScript: myObj
 	var myObj = new Object();
 	
@@ -46,6 +49,7 @@ What does this look like in JavaScript?
         return this.age;
     };
 
+   {% endhighlight %}
 
 EXERCISE 1: Define an object that has its own property and method. 
 
@@ -105,9 +109,9 @@ EXERCISE 2:
 ### Before moving on, make sure you feel comfortable with Objects in JavaScript. They are important!
 
 ##Prototypes
-A prototype is a property of functions and of objects that are created by constructor functions! The prototype of a function is an object. Its main use is when a function is used as a constructor. What does this mean...?!?
+A prototype is a property of functions and of objects that are created by constructor functions! The prototype of a function is an object. Its main use is when a function is used as a constructor. What does this mean?!?
 
-Lets look at our Pasta Object that we creating using a constructor function:
+Look at our Pasta Object that we creating using a constructor function:
 
 
 	function Pasta (grain, width, shape) {
@@ -136,7 +140,7 @@ You can use the prototype object to derive one object from another! For example,
 
 Question: What properties does Gnocchi have?
 
-Let's make some more objects that relate to Pasta:
+Make some more objects that relate to Pasta:
 
 	var Spaghetti = Object.create(Pasta);
 	
@@ -147,9 +151,9 @@ Let's make some more objects that relate to Pasta:
 Question: What is the difference of the two above Spaghetti objects?
 
 ##The Prototype Chain/Prototype Inheritance
-Every object in Javascript has a prototype. When a messages reaches an object, JavaScript will attempt to find a property in that object first, if it cannot find it then the message will be sent to the object’s prototype and so on. This works just like single parent inheritance in a class based language.
+Every object in Javascript has a prototype. When a messages reaches an object, JavaScript will attempt to find a property in that object first, if it cannot find it then the message will be sent to the objects prototype and so on. This works just like single parent inheritance in a class based language.
 
-Let's map out the Prototype Chain for Gnocchi together. Here is a nifty drawing for our reference: 
+Map out the Prototype Chain for Gnocchi together. Here is a nifty drawing for our reference: 
 
 <img src="https://docs.google.com/drawings/d/1NdiIkHd9Cg2j6W4QcJ1X3DEhGXD2gacMXRuURcoE5T4/pub?w=960&h=720"/> 
 
@@ -161,7 +165,7 @@ EXERCISE 3: Map out the Prototype Chain for your object from exercise 1 & 2.
 
 **`Pasta.prototype` != `Pasta.__proto__`**
 
-The 'prototype' property above for pasta is different from `__proto__`. 
+The 'prototype` property above for pasta is different from `__proto__`. 
 
 **`Pasta.prototype`**
 
@@ -172,7 +176,7 @@ Every function in JavaScript has a special property called 'prototype'. This pro
 `.__proto__` references inheritance through the prototype chain. So, `Spaghetti.__proto__` = Pasta. Essentially this means that `.__proto__` is pointing to the past.
 
 ## Let's get Cooking!
-Now that we've got some basics, let's play around with all this. You can build your own objects with inheritance of follow along below:
+Now that we have some basics, lets play around with all this. You can build your own objects with inheritance of follow along below:
 
 Working in the console:
 
