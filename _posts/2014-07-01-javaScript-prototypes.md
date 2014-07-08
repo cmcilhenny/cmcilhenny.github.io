@@ -13,13 +13,13 @@ JavaScript uses prototypes instead of classes to define and create objects. What
 
 ###Object-Oriented Programming (OOP) and why it is awesome:
 
-Object Oriented Programming, often referred to as OOP is really just a design philosophy. In the context of software, OOP uses a collection of objects, as opposed to a collection of functions, or a list of instructions to the computer. In OOP, each object is capable of receiving messages, processing data, and sending messages to other objects. Each object can be viewed as an independent little machine with a distinct role or responsibility.
+Object Oriented Programming, often referred to as OOP is really just a design philosophy. In the context of software, OOP uses a collection of objects, as opposed to a collection of functions, or a list of instructions to the computer. In OOP, each object can receive messages, process data, and send messages to other objects. Each object can be viewed as an independent little machine with a distinct role or responsibility.
 
 **A Practical Example of OOP**
 
-	Take your `hand` as an example. The `hand` is a class (Ruby) or a prototype (JavaScript). Your body has two objects of type hand, named left hand and right hand. Their main functions are controlled/ managed by a set of electrical signals sent through your shoulders (through an interface). So the shoulder is an interface which your body uses to interact with your hands. The hand is a well architected class/prototype. The hand is being re-used to create the left hand and the right hand by slightly changing the properties of it.
+	Take your `hand` as an example. The `hand` is a class (Ruby) or a prototype (JavaScript). Your body has two objects of type hand, named left hand and right hand. Their main functions are controlled/ managed by a set of electrical signals sent through your shoulders (through an interface). So the shoulder is an interface which your body uses to interact with your hands. The hand is a class/prototype. The hand is being re-used to create the left hand and the right hand by slightly changing the properties of it.
 
-Object-oriented programming is helps promote greater flexibility and maintainability in programming. Object oriented code aims to be more simple to develop and easier to understand later on. 
+Object-oriented programming helps with greater flexibility and maintainability in programming. Object oriented code is meant to be more simple to develop and easier to understand later on. 
 
 
 ###Objects in JavaScript
@@ -165,11 +165,11 @@ EXERCISE 3: Map out the Prototype Chain for your object from exercise 1 & 2.
 
 **`Pasta.prototype` != `Pasta.__proto__`**
 
-The 'prototype` property above for pasta is different from `__proto__`. 
+The `prototype` property above for pasta is different from `__proto__`. 
 
 **`Pasta.prototype`**
 
-Every function in JavaScript has a special property called 'prototype'. This property points to the object that a new instance of the object would inherit properties from. Essentially this means that 'prototype' points to the future. We actually used this when setting the color of Squid Ink pasta as black!
+Every function in JavaScript has a special property called `prototype`. This property points to the object that a new instance of the object would inherit properties from. Essentially this means that `prototype` points to the future. We actually used this when setting the color of Squid Ink pasta as black!
 
 **`Pasta.__proto__`**
 
