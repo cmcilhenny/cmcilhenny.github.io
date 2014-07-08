@@ -3,7 +3,7 @@ layout: post
 title: JavaScript Prototypes
 ---
 
-<h4>Recently I was asked to give a 15 minute lesson on JavaScript Prototypes. In 15 minutes I needed to explain this complicated idea to students who had just learned JavaScript. Tricky. Here's the attempt.</h4>
+<h4>Recently I was asked to give a 15 minute lesson on JavaScript Prototypes. In 15 minutes I needed to explain this complicated idea to students who had just learned JavaScript. Tricky. Here is the attempt.</h4>
 
 #JavaScript Prototypes
 
@@ -19,7 +19,7 @@ Object Oriented Programming, often referred to as OOP is really just a design ph
 
 	Take your `hand` as an example. The `hand` is a class (Ruby) or a prototype (JavaScript). Your body has two objects of type hand, named left hand and right hand. Their main functions are controlled/ managed by a set of electrical signals sent through your shoulders (through an interface). So the shoulder is an interface which your body uses to interact with your hands. The hand is a class/prototype. The hand is being re-used to create the left hand and the right hand by slightly changing the properties of it.
 
-Object-oriented programming helps with greater flexibility and maintainability in programming. Object oriented code is meant to be more simple to develop and easier to understand later on. 
+Object-oriented programming helps with greater flexibility in programming. Object oriented code is meant to be more simple to develop and easier to understand later on. 
 
 
 ###Objects in JavaScript
@@ -175,10 +175,11 @@ Every function in JavaScript has a special property called `prototype`. This pro
 
 `.__proto__` references inheritance through the prototype chain. So, `Spaghetti.__proto__` = Pasta. Essentially this means that `.__proto__` is pointing to the past.
 
-## Let's get Cooking!
+## Lets get Cooking!
 Now that we have some basics, lets play around with all this. You can build your own objects with inheritance of follow along below:
 
 Working in the console:
+
 
 	function Pasta (grain, width, shape) {
 		this.grain = grain;
@@ -195,6 +196,7 @@ Working in the console:
 	//check out what happens when you call .__proto__ and prototype on spaghetti:
 	spaghetti.prototype
 	spaghetti.__proto__
+
 
 Question: What does `spaghetti.prototype` return and why? What about `Pasta.prototype`? Or `spaghetti.__proto__`?
 
