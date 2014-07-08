@@ -3,11 +3,9 @@ layout: post
 title: What is nodejs
 ---
 
+<h4>In early 2012 I read about Code Academy and their Code Year. I was interested, and started learning JavaScript. A year and a half later, I felt quite confident in declaring a variable and possibly creating a while loop. Not much, but I was hooked! I love making things AND I love learning. I've been learning programming with more determination in the last few months and decided to tackle NodeJs. Below is a breakdown of how I started learning Node and improving my understanding of JavaScript.</h4>
 
-
-What is Node?
-===========
-
+##What is Node?
 
 >Node.js is a platform built on Chromes JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices. **-nodejs.org**
 
@@ -51,34 +49,35 @@ So, Node applications are designed to maximize throughput and efficiency, using 
 
 Before we get into definitions, we already have some experience with this basic concept of blocking. Our &lt;script&gt; tags in html are a great example of this. If organized in certain ways, javascript files can block the rendering of a page. It is because of blocking that we always put our script tags last, after links to CSS and insome cases, after html.
 
-######I/O: 
-input/output
+#####I/O: 
+	input/output
 
-######Blocking: 
-Imagine you are operating the cash register in a bakery. You handle your customers sequentially and synchronously, like this:
+#####Blocking: 
+	Imagine you are operating the cash register in a bakery. 
+	You handle your customers sequentially and synchronously, like this:
 
-* Take order
-* Tell baker to bake the bread
-* Wait until bread is baked
-* Charge money
-* Deliver bread
-* GOTO first/next customer
+		* Take order
+		* Tell baker to bake the bread
+		* Wait until bread is baked
+		* Charge money
+		* Deliver bread
+		* GOTO first/next customer
 		
-######Non-Blocking:
-Given the above scenario, a non-blocking implimentation is
+#####Non-Blocking:
+	Given the above scenario, a non-blocking implimentation is
 
 
-* Take order
-* Tell baker to bake the bread, and notify you when finished. When notified:
-	* Charge money
-	* Deliver bread
-* GOTO 1/next customer
+		* Take order
+		* Tell baker to bake the bread, and notify you when finished. When notified:
+		* Charge money
+		* Deliver bread
+		* GOTO 1/next customer
 
 In the second scenario, you can more efficiently handle requests for bread because, instead of waiting for bread to be ready before handling the next customer, you can start handling the next customer while waiting for bread. 
 
 
-######Asynchonous:
-Asynchronous code does not have to wait. Your program can continue to run. You do this to keep your site or app responsive, reducing waiting time for the user (ie. non-blocking).
+#####Asynchonous:
+	Asynchronous code does not have to wait. Your program can continue to run. You do this to keep your site or app responsive, reducing waiting time for the user (ie. non-blocking).
 
 
 ### Non-Blocking Exercises
