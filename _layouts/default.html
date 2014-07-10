@@ -2,6 +2,7 @@
 
 <html>
 <head>
+  <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>{{page.title}}</title>
 	<link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
@@ -12,15 +13,15 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
   <!-- Latest compiled and minified JavaScript -->
-     <script href="javaScripts/application.js"></script>
-
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 
 	{% include header.html %}
 	
+
 <div class="jumbotron col-xs-12">
+  <!-- <div class="container"> -->
   <h1>Courtney McIlhenny :: Blog<img class="img-circle pull-right portrait" src="images/me.jpg"></h1>
  <div style="margin-top:35px">
     <a href="https://twitter.com/camcil" class="btn btn-social btn-twitter">
@@ -34,6 +35,7 @@
     </a>
     <br>
   </div>
+<!-- </div> -->
 </div>
 <div class="container">
   <div class="row">
@@ -44,7 +46,6 @@
 </div>
 
 		{% include footer.html%}
-	 
-   <script href="javaScripts/bootstrap.min.js"></script>
+
 </body>
 </html>
