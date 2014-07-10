@@ -4,9 +4,7 @@
   margin-right: 10px;
 }
 
-/*
- * Masthead for nav
- */
+/*Masthead for nav */
 
 .blog-masthead {
   background-color: #5D707F;
@@ -48,8 +46,23 @@
 
 /*Portrait sizing*/
 .portrait {
-  height: 120px;
-  width: 120px;
+  height: 150px;
+  width: 150px;
+  margin-right: 30px;
+}
+
+/*about page project list*/
+.project-item {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  font-weight: 500;
+  color: #5D707F;
+}
+.project-item:hover,
+.project-item:focus {
+  color: #66CDAA;
+  text-decoration: none;
 }
 
 /*sticky footer*/

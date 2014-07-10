@@ -1,9 +1,9 @@
 ---
 layout: post
-title: What is nodejs
+title: Blocking and NodeJs
 ---
 
-<h4>In early 2012 I read about Code Academy and their Code Year. I was interested, and started learning JavaScript. A year and a half later, I felt quite confident in declaring a variable and possibly creating a while loop. Not much, but I was hooked! I love making things AND I love learning. I've been learning programming with more determination in the last few months and decided to tackle NodeJs. Below is a breakdown of how I started learning Node and improving my understanding of JavaScript.</h4>
+<h4>In early 2012 I read about Code Academy's Code Year. I was interested, and started learning JavaScript. A year and a half later, I was confident in declaring a variable and maybe creating a while loop. Not much, but I was hooked! I love learning and making. I've been learning to code with more determination in the last few months and decided to tackle NodeJs. Below is a breakdown of how I started learning Node and improving my understanding of JavaScript.</h4>
 
 ##What is Node?
 
@@ -13,12 +13,6 @@ title: What is nodejs
 
 * Node allows you to build scalable network applications using Javascript on the server-side.
 * Node is a command line interpreter for JavaScript.
-
-### Helpful snipits of info
-	* Ryan Dahl is node's origin author
-	* Node was itially released in May of 2009
-	* Node is written in C, C++, JavaScript
-	* Visit the node website at nodejs.org
 
 ### Node in the real world
 
@@ -78,14 +72,6 @@ In the second scenario, you can more efficiently handle requests for bread becau
 
 #####Asynchonous:
 	Asynchronous code does not have to wait. Your program can continue to run. You do this to keep your site or app responsive, reducing waiting time for the user (ie. non-blocking).
-
-
-### Non-Blocking Exercises
-
-yah javascript! See attached files.
-
-
-
 
 
 ###Resources used
