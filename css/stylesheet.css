@@ -16,9 +16,13 @@
 .blog-nav-item {
   position: relative;
   display: inline-block;
-  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   font-weight: 500;
   color: #66CDAA; 
+  font-size: 18px;
 }
 .blog-nav-item:hover,
 .blog-nav-item:focus {
@@ -47,7 +51,7 @@
 /*Portrait sizing*/
 .portrait {
   height: 150px;
-  width: 150px;
+  width: auto;
   margin-right: 30px;
 }
 
