@@ -1,15 +1,14 @@
 /*margin for body*/
-.body {
-  margin-left: 10px;
-  margin-right: 10px;
+body {
+  /*margin-left: 10px;
+  margin-right: 10px;*/
+  background-color: #ddd;
 }
 
 /*Masthead for nav */
 
 .blog-masthead {
-  background-color: #5D707F;
-  -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
-          box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+  height: 75px;
 }
 
 /* Nav links */
@@ -22,31 +21,13 @@
   padding-left: 10px;
   padding-right: 10px;
   font-weight: 500;
-  color: #66CDAA; 
+  color: #111; 
   font-size: 18px;
 }
 .blog-nav-item:hover,
 .blog-nav-item:focus {
-  color: #cdddeb;
+  color: #aaa;
   text-decoration: none;
-}
-
-/* Active state gets a caret at the bottom */
-.blog-nav .active {
-  color: #eee;
-}
-.blog-nav .active:after {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 0;
-  margin-left: -5px;
-  vertical-align: middle;
-  content: " ";
-  border-right: 5px solid transparent;
-  border-bottom: 5px solid;
-  border-left: 5px solid transparent;
 }
 
 /*Portrait sizing*/
@@ -85,8 +66,56 @@ p {
   line-height: 1.4;
 }
 
-/*setting color on linke for posts*/
-.home-content {
-  background-color: #66CDAA;
-  border-radius: 10px;
+.blog-square {
+  height: 300px;
+  background-color: #fdfdfd;
+  color: #111;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.blog-square:hover {
+  background-color: #aaa;
+  color: #eee;
+}
+
+.blog-square .date {
+  color: #bbb;
+  font-style: italic;
+}
+
+.blog-square:hover .date {
+  color: #ccc;
+}
+
+.blog-square:hover h4 {
+  color: #fff;
+}
+
+.footer p {
+  color: #ccc;
+  font-size: 12px;
+}
+
+.blog-square-container {
+  background-color: #fdfdfd;
+}
+
+.blog-square-empty {
+  height: 300px;
+  background-color: #fdfdfd;
+  color: #111;
+}
+
+#signature-block {
+  height: 50px;
+  width: auto;
+}
+
+.blog-main-square {
+  height: 300px;
+  background-image: url('/images/roosters.jpg');
+  background-size: 100% 100%;
 }
