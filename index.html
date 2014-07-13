@@ -3,33 +3,87 @@ layout: default
 title: Courtney McIlhenny
 ---
 
-{% for post in site.posts %}
-
-<div class="row">
-  <div class="col-12 col-lg-12">
-    <a href="{{post.url}}">
-    	<h2 class="home-post-title">{{post.title}}</h2>
-    </a>
-    <div><em>{{post.date | date: "%B %d, %Y"}}</em> 
-      {% for tag in post.tags %}
-        <span class="label">{{tag}}</span>
-      {% endfor %}
+<div ng-controller="PostCtrl" class="blog-square-container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 blog-main-square">
     </div>
-    <br>
-    <div>{{post.excerpt}}</div>
-    <div><h6><a href="{{post.url}}">more... <span class="glyphicon glyphicon-chevron-right"></i></a></h6></div>
- 
+    <div class="col-xs-12 col-sm-6 blog-square" ng-click="navigate(firstPost.url)">
+      <h4>{[{firstPost.title}]}</h4>
+      <p>
+        <span class="date">
+          {[{firstPost.date}]}
+        </span>
+        {[{firstPost.summary | limitTo: 500}]}
+      </p>
+    </div>
+  </div>
+  <div class="row" ng-repeat="pair in postPairs">
+    <div class="col-xs-12 col-sm-6 blog-square" ng-click="navigate(pair[0].url)">
+      <h4>{[{pair[0].title}]}</h4>
+      <p>
+        <span class="date">
+          {[{pair[0].date}]}
+        </span>
+        {[{pair[0].summary | limitTo: 500}]}
+      </p>
+    </div>
+    <div class="col-xs-12 col-sm-6 blog-square-empty" ng-click="navigate(pair[1].url)" ng-class="{'blog-square': pair[1].title != ''}">
+      <h4>{[{pair[1].title}]}</h4>
+      <p>
+        <span class="date">
+          {[{pair[1].date}]}
+        </span>
+        {[{pair[1].summary | limitTo: 500}]}
+      </p>
+    </div>
   </div>
 </div>
-<br>
-<hr>
-<br>
 
-{% endfor %}
+
 
 <!-- carat to indicate page view -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.js"></script>
+
 <script type="text/javascript">
-	$(document).ready( function(){
-		$("#home-carat").addClass('active');
-	});
+
+  // Changing symbol for string interpolation
+  angular.module('myApp', []).config(function($interpolateProvider){
+        $interpolateProvider.startSymbol('{[{').endSymbol('}]}');
+    }
+  );
+
+  function PostCtrl($scope) {
+    $scope.posts = [];
+    {% for post in site.posts %}
+    var post = {};
+    post.title = "{{post.title}}";
+    post.date = "{{post.date | date: "%B %d, %Y"}}";
+    post.summary = "{{post.summary}}";
+    post.url = "{{post.url}}";
+    $scope.posts.push(post);
+    {% endfor %}
+    
+    $scope.firstPost = $scope.posts.splice(0,1)[0];
+    $scope.postPairs = [];
+    while($scope.posts.length > 0) {
+      if($scope.posts.length >= 2) {
+        var post1 = $scope.posts.splice(0,1)[0];
+        var post2 = $scope.posts.splice(0,1)[0];
+        $scope.postPairs.push([post1,post2]);
+      }
+      else {
+        var post1 = $scope.posts.splice(0,1)[0];
+        var post2 = { title: "", date: "", summary: "", url: "#"}
+        var pair = [post1, post2];
+        $scope.postPairs.push(pair);
+      }
+    }
+
+    $scope.navigate = function(url) {
+      if(url != "#") {
+        window.location.assign(url);
+      }
+    };
+
+  };
 </script>
