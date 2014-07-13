@@ -13,7 +13,8 @@
 }
 
 /* Nav links */
-.blog-nav-item {
+.blog-nav-item,
+#blog-name {
   position: relative;
   display: inline-block;
   padding-top: 20px;
@@ -82,4 +83,10 @@ p {
   font-size: 16px;
   font-weight: 200;
   line-height: 1.4;
+}
+
+/*setting color on linke for posts*/
+.home-content {
+  background-color: #66CDAA;
+  border-radius: 10px;
 }
