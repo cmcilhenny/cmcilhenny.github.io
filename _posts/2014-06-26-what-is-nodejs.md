@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Blocking and NodeJs
+summary: In early 2012 I read about Code Academy's Code Year. I was interested, and started learning JavaScript. A year and a half later, I was confident in declaring a variable and maybe creating a while loop. Not much, but I was hooked! I love learning and making. I've been learning to code with more determination in the last few months and decided to tackle NodeJs. 
 ---
 
 In early 2012 I read about Code Academy's Code Year. I was interested, and started learning JavaScript. A year and a half later, I was confident in declaring a variable and maybe creating a while loop. Not much, but I was hooked! I love learning and making. I've been learning to code with more determination in the last few months and decided to tackle NodeJs. Below is a breakdown of how I started learning Node and improving my understanding of JavaScript.
