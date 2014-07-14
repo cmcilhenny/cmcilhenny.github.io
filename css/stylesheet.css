@@ -147,16 +147,24 @@ p {
 
 @media (min-width: 1200px) {
 /*fix picture and drop row hight by 15-20px*/
+  .blog-main-square {
+  background-size: 100% auto;
+  background-position: bottom right;
 }
-@media (max-width: ) {
+}
+@media (min-width: 992px) {
+  .blog-main-square {
+  background-size: 100% auto;
+  background-position: bottom right;
+}
+}
+@media (max-width: 766px) {
+  .blog-main-square {
+  background-size: 100% auto;
+  background-position: bottom right;
+}
+}
 
-}
-@media (max-width: ) {
-
-}
-@media (min-width: ) { 
-
-}
 
 
 
