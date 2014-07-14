@@ -1,12 +1,8 @@
-/*margin for body*/
 body {
-  /*margin-left: 10px;
-  margin-right: 10px;*/
   background-color: #ddd;
 }
 
 /*Masthead for nav */
-
 .blog-masthead {
   height: 75px;
 }
@@ -34,21 +30,6 @@ body {
 .img-circle {
   height: 150px;
   width: auto;
-
-}
-
-/*about page project list*/
-.project-item {
-  position: relative;
-  display: inline-block;
-  padding: 10px;
-  font-weight: 500;
-  color: #5D707F;
-}
-.project-item:hover,
-.project-item:focus {
-  color: #66CDAA;
-  text-decoration: none;
 }
 
 /*sticky footer*/
@@ -75,6 +56,7 @@ p {
   padding-bottom: 30px;
   padding-left: 5%;
   padding-right: 5%;
+  cursor: -webkit-grab; cursor: -moz-grab;
 }
 
 .blog-square:hover {
@@ -142,6 +124,9 @@ p {
   color: #fff;
   text-decoration: none;
 }
+
+
+
 
 /*responsive css*/
 
