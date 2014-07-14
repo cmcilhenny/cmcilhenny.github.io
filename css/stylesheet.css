@@ -31,10 +31,10 @@ body {
 }
 
 /*Portrait sizing*/
-.portrait {
+.img-circle {
   height: 150px;
   width: auto;
-  margin-right: 30px;
+
 }
 
 /*about page project list*/
@@ -121,14 +121,44 @@ p {
   background-size: 100% 100%;
 }
 
-#photo-stream {
-  text-align: center;
-}
-
-#tweeter-listener {
-  text-align: center;
-}
-
+#photo-stream,
+#tweeter-listener,
 #bee-three {
   text-align: center;
 }
+
+.git-hub {
+  position: absolute;
+  bottom: 30px;
+  right: 10%;
+  height: 12px;
+}
+
+.link {
+  color: black;
+}
+
+.link:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*responsive css*/
+
+@media (min-width: 1200px) {
+/*fix picture and drop row hight by 15-20px*/
+}
+@media (max-width: ) {
+
+}
+@media (max-width: ) {
+
+}
+@media (min-width: ) { 
+
+}
+
+
+
+
+
