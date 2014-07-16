@@ -28,7 +28,7 @@ JavaScript objects are collections of properties and methods.
 
 What is a method? 
 
-	A method is a function that is a member of an object. I like to think of this like a job. A function is a job that an object has to to at an appropriate time. 
+	A method is a function that is a member of an object. I like to think of this like a job. A function is a job that an object has to do at an appropriate time. 
 
 What is a property?
 
