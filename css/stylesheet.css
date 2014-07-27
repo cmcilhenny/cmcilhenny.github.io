@@ -18,7 +18,7 @@ body {
   padding-right: 10px;
   font-weight: 500;
   color: #111; 
-  font-size: 18px;
+  font-size: 20px;
 }
 .blog-nav-item:hover,
 .blog-nav-item:focus {
@@ -103,11 +103,12 @@ p {
   background-size: 100% 100%;
 }
 
-#photo-stream,
+/*#photo-stream,
 #tweeter-listener,
-#bee-three {
+#bee-three,
+#adventure-lib {
   text-align: center;
-}
+}*/
 
 .git-hub {
   position: absolute;
