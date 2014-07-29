@@ -1,10 +1,10 @@
 ---
 layout: post
 title: JavaScript Prototypes
-summary: Recently I was asked to give a 15 minute lesson on JavaScript Prototypes. In 15 minutes I needed to explain this complicated idea to students who had just learned JavaScript. Tricky. Here is the attempt.
+summary: Recently I was asked to give a 15 minute lesson on JavaScript Prototypes. In 15 minutes this complicated idea needed to be explained to students who had just learned JavaScript. Tricky. Here is the attempt.
 ---
 
-Recently I was asked to give a 15 minute lesson on JavaScript Prototypes. In 15 minutes I needed to explain this complicated idea to students who had just learned JavaScript. Tricky. Here is the attempt.
+Recently I was asked to give a 15 minute lesson on JavaScript Prototypes. In 15 minutes this complicated idea needed to be explained to students who had just learned JavaScript. Tricky. Here is the attempt.
 
 #JavaScript Prototypes
 
