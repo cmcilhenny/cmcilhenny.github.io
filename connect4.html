@@ -1,0 +1,182 @@
+---
+layout: default
+title: Connect4
+---
+  <style>
+  body {
+  padding: 20px;
+  }
+
+  td {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  }
+
+  #main-body {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  }
+
+  .black {
+  background-color: black;
+  }
+
+  .red {
+  background-color: red;
+  }
+  </style>
+  <script>
+
+  //using Angualr.
+    var GameController = function ($scope) {
+      $scope.message = "Your turn Red!";
+      $scope.turn = "red";
+      // attempting to add user choice to column/rows
+      $scope.col = 7;
+      $scope.row = 6;
+      // setting up an array of arrays for the board play. Inner array reflects one column (not one row).
+      $scope.cellData = [ [null, null, null, null, null, null], 
+                      [null, null, null, null, null, null], 
+                      [null, null, null, null, null, null], 
+                      [null, null, null, null, null, null], 
+                      [null, null, null, null, null, null], 
+                      [null, null, null, null, null, null], 
+                      [null, null, null, null, null, null] ];
+      // creating function for each player's turn.  
+      $scope.columnClick = function(column) {
+        // first check for winner. If there is a winner, message new game.
+        if ($scope.checkWinner()=== true) {
+            $scope.message = "Let's start a new game!";
+            return;
+        }
+        // check the last value in the column and return if not null
+        if ($scope.cellData[column][$scope.row-1] != null) {
+            return;
+        }
+        // with the columnClick, find the first null value and change to player value.
+        for (i=0; i < $scope.cellData[column].length; i++) {
+         
+
+            if ($scope.cellData[column][i] === null) {
+                $scope.cellData[column][i] = $scope.turn; 
+                break;
+            }
+      }
+      if ($scope.checkWinner() === true) {
+          return;
+      }
+      $scope.nextTurn();
+      $scope.message = "Your turn " + $scope.turn + "!";
+      }
+      // swaps players turns.
+      $scope.nextTurn = function() {
+        if ($scope.turn === "red") {
+            $scope.turn = "black";
+        } else {
+            $scope.turn = "red";
+        }
+      }
+      // logic for checking for winner
+      $scope.checkWinner = function() {
+      // check vertically for 4 in row
+      for (i = 0; i < $scope.row - 3; i++) {
+          for(j = 0; j < $scope.col; j++) {
+              if ($scope.cellData[j][i] === $scope.cellData[j][i+1] && $scope.cellData[j][i+1] === $scope.cellData[j][i+2] && $scope.cellData[j][i+2] === $scope.cellData[j][i+3] && $scope.cellData[j][i] != null) {
+                  $scope.message = "You won " + $scope.turn + "!"
+                  return true;
+              }
+          }
+      }
+      // check horizontally for 4 in row
+      for (i=0; i < $scope.col - 3; i++) {
+          for (j=0; j < $scope.row - 1; j++) {
+              if ($scope.cellData[i][j] === $scope.cellData[i+1][j] && $scope.cellData[i+1][j] === $scope.cellData[i+2][j] && $scope.cellData[i+2][j] === $scope.cellData[i+3][j] && $scope.cellData[i][j] != null) {
+                  $scope.message = "You won " + $scope.turn + "!"
+                  return true;
+              }
+          }
+      }
+      // check diagonally from bottom left corner 
+      for (i=0;i<$scope.col - 3;i++) {
+          for(j=0; j < $scope.row - 3 ;j++) {
+              if ($scope.cellData[i][j] === $scope.cellData[i+1][j+1] && $scope.cellData[i+1][j+1] === $scope.cellData[i+2][j+2] && $scope.cellData[i+2][j+2] === $scope.cellData[i+3][j+3] && $scope.cellData[i][j] != null) {
+                  $scope.message = "You won " + $scope.turn + "!"
+                  return true;
+              }
+          }
+      }
+      // check diagonally from bottom right corner
+      for (i = $scope.col - 1; i>2; i--) {
+          for (j=0; j< $scope.row - 3; j++) {
+              if($scope.cellData[i][j] === $scope.cellData[i-1][j+1] && $scope.cellData[i-1][j+1] === $scope.cellData[i-2][j+2] && $scope.cellData[i-2][j+2] === $scope.cellData[i-3][j+3] && $scope.cellData[i][j] != null) {
+                  $scope.message = "You won " + $scope.turn + "!"
+                  return true;
+              }
+          }
+      }   
+      }
+      // new game set up when new game button clicked
+      $scope.newGame = function() {
+        $scope.nextTurn();
+        $scope.cellData = [ [null, null, null, null, null, null], 
+                        [null, null, null, null, null, null], 
+                        [null, null, null, null, null, null], 
+                        [null, null, null, null, null, null], 
+                        [null, null, null, null, null, null], 
+                        [null, null, null, null, null, null], 
+                        [null, null, null, null, null, null] ];
+        $scope.message = "Your turn " + $scope.turn + "!";
+        $scope.columnArray = [];
+        $scope.rowArray = [];
+        for (i=0; i < $scope.col; i++)
+            $scope.columnArray.push(i);
+        for (i=$scope.row; i > -1; i--)
+            $scope.rowArray.push(i);
+
+        for (i=0; i<$scope.col; i++) {
+            $scope.cellData.push([]);
+            for(j=0; j < $scope.row; j++) {
+                $scope.cellData[i].push(null);
+            }
+        }
+      }
+      // show game when play is pressed
+      $scope.playPressed = false;
+      $scope.play = function() {
+        if ($scope.playPressed === false) {
+            $scope.playPressed = true;
+        }
+        $scope.newGame();
+      }
+    }
+</script>
+</head>
+<body >
+
+<div class="row" id="main-body" ng-controller="GameController">
+
+  <h1>Connect Four</h1>
+
+  <div id="board-size">
+    <input type="text" placeholder="6 columns" ng-model="col" ng-hide="playPressed"></input>
+    <input type="text" placeholder="7 rows" ng-model="row" ng-hide="playPressed"></input>
+    <button type="button" ng-click="play()" ng-hide="playPressed">Play</button>
+  </div>
+
+  <div class="game" ng-show="playPressed">
+    <h2>{{message}}</h2>
+    <button ng-click="newGame()" ng-show="checkWinner()">New Game</button>
+    <table border="1">
+      <tr ng-repeat="row in rowArray">
+      <td ng-repeat="column in columnArray" ng-click="columnClick(column)" ng-class="{black: cellData[column][row]=='black', red: cellData[column][row]=='red'}"></td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+</body>
+
