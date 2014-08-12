@@ -7,8 +7,9 @@ title: Connect4
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Connect4</title>
-    
+    <!-- loading bootstrap -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <!-- loadiner custom css -->
     <link rel="stylesheet" type="text/css" href="/css/stylesheet.css">
     <style>
       body {
@@ -40,9 +41,12 @@ title: Connect4
         background-color: red;
       }
     </style>
+    <!-- loading jquery -->
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- loading angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
     <script>
+    // setting up interpolate function to allow angular to work within jeckyll
       angular.module('myApp', []).config(function($interpolateProvider){
         $interpolateProvider.startSymbol('{[{').endSymbol('}]}');
         }
@@ -51,7 +55,7 @@ title: Connect4
       var GameController = function ($scope) {
         $scope.message = "Your turn Red!";
         $scope.turn = "red";
-        // attempting to add user choice to column/rows
+        // adding user choice to column/rows
         $scope.col = 7;
         $scope.row = 6;
         
