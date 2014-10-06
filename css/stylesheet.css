@@ -99,7 +99,8 @@ p {
 
 .blog-main-square {
   height: 300px;
-  background-image: url('/images/street.jpg');
+  background-image: url('/images/street2.jpg');
+  background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 
@@ -138,20 +139,25 @@ p {
 /*fix picture and drop row hight by 15-20px*/
   .blog-main-square {
   background-size: 100% auto;
-  background-position: bottom right;
+  background-position: top left;
 }
 }
 @media (min-width: 992px) {
   .blog-main-square {
   background-size: 100% auto;
-  background-position: bottom right;
+  background-position: top right;
 }
 }
 @media (max-width: 766px) {
   .blog-main-square {
   background-size: 100% auto;
-  background-position: bottom right;
-}
+  background-position: top right;
+  }
+
+  .blog-nav-item {
+   font-size: 15px;
+   padding-right: 20px;
+  }
 }
 
 
