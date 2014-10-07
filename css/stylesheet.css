@@ -60,6 +60,7 @@ p {
   padding-left: 5%;
   padding-right: 5%;
   cursor: -webkit-grab; cursor: -moz-grab;
+  
 }
 
 .blog-square:hover {
@@ -159,8 +160,12 @@ p {
   }
 
   .blog-nav-item {
-   font-size: 15px;
+   font-size: 10px;
    padding-right: 20px;
+  }
+
+  .blog-nav-item:first-child {
+    padding-left: 0px;
   }
 }
 
