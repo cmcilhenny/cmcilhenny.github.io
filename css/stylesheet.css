@@ -19,14 +19,14 @@ body {
   font-weight: 500;
   color: #111; 
   font-size: 20px;
-  transition: font-size 2s;
+  /*transition: font-size 2s;*/
  
 }
 .blog-nav-item:hover,
 .blog-nav-item:focus {
   
   text-decoration: none;
-  font-size: 25px;
+  /*font-size: 25px;*/
 }
 
 /*Portrait sizing*/
